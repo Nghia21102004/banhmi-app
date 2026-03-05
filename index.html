@@ -1,0 +1,239 @@
+<!DOCTYPE html> 
+<!-- Khai báo đây là tài liệu HTML5 để trình duyệt hiểu cách hiển thị -->
+
+<html lang="vi">
+<!-- Thẻ html là thẻ gốc của toàn bộ trang web
+     lang="vi" giúp trình duyệt biết đây là trang tiếng Việt -->
+
+<head>
+    <meta charset="UTF-8"> <!-- khai báo bảng mã tiếng Việt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- giúp web tự co theo màn hình điện thoại -->
+    <title>Quản lý bán bánh mì</title> <!-- tiêu đề tab -->
+    <link rel="stylesheet" href="css/style.css"> <!-- kết nối file CSS -->
+</head>
+
+<body>
+<!-- Thẻ body chứa toàn bộ nội dung hiển thị trên trang -->
+
+<h1>🥖 Quản lý bán bánh mì </h1>
+<!-- h1 là tiêu đề lớn nhất trong HTML -->
+
+<div class="menu">
+<!-- div là khối chứa nội dung
+     class="menu" để CSS có thể tạo style cho menu -->
+
+<button onclick="showPage('home')">
+<!-- button là nút bấm
+     onclick nghĩa là khi bấm vào sẽ chạy hàm showPage() -->
+
+Trang chủ
+<!-- chữ hiển thị trên nút -->
+
+</button>
+
+<button onclick="showPage('sell')">
+<!-- khi bấm nút này sẽ gọi hàm showPage và truyền giá trị sell -->
+
+Nhập bán hàng
+
+</button>
+
+<button onclick="showPage('cost')">
+<!-- mở trang chi phí -->
+
+Chi phí
+
+</button>
+
+<button onclick="showPage('profit')">
+<!-- mở trang lợi nhuận -->
+
+Lợi nhuận
+
+</button>
+
+<button onclick="showPage('history')">
+<!-- mở trang lịch sử -->
+
+Lịch sử
+
+</button>
+
+</div>
+
+
+<!-- =========================== -->
+<!-- TRANG DASHBOARD -->
+<!-- =========================== -->
+
+<div id="home" class="page">
+<!-- div này là trang dashboard
+     id="home" để JS nhận biết
+     class="page" để CSS quản lý -->
+
+<h2>Dashboard</h2>
+<!-- tiêu đề nhỏ hơn h1 -->
+
+<p>
+<!-- p là đoạn văn -->
+
+Doanh thu hôm nay:
+
+<span id="todayRevenue">0</span>
+<!-- span dùng để chứa dữ liệu nhỏ trong dòng
+     id="todayRevenue" để JavaScript cập nhật số tiền -->
+
+VNĐ
+
+</p>
+
+<p>
+
+Chi phí hôm nay:
+
+<span id="todayCost">0</span>
+<!-- JS sẽ cập nhật chi phí -->
+
+VNĐ
+
+</p>
+
+<p>
+
+Lợi nhuận:
+
+<span id="todayProfit">0</span>
+<!-- JS sẽ tính lợi nhuận và hiển thị ở đây -->
+
+VNĐ
+
+</p>
+
+</div>
+
+
+<!-- =========================== -->
+<!-- TRANG NHẬP BÁN HÀNG -->
+<!-- =========================== -->
+
+<div id="sell" class="page">
+<!-- trang nhập dữ liệu bán bánh -->
+
+<h2>Nhập bán hàng</h2>
+
+<label>Loại bánh</label>
+<!-- label là nhãn mô tả input -->
+
+<select id="banh">
+<!-- select tạo menu lựa chọn -->
+
+<option value="15000">
+<!-- option là lựa chọn trong select
+     value là giá trị khi được chọn -->
+
+Bánh mì thịt
+
+</option>
+
+<option value="12000">
+
+Bánh mì trứng
+
+</option>
+
+<option value="10000">
+
+Bánh mì chả
+
+</option>
+
+</select>
+
+<label>Số lượng</label>
+
+<input type="number" id="soluong">
+<!-- input để nhập dữ liệu
+     type="number" chỉ cho nhập số
+     id="soluong" để JS lấy dữ liệu -->
+
+<button onclick="addSell()">
+<!-- khi bấm sẽ gọi hàm addSell trong JavaScript -->
+
+Thêm
+
+</button>
+
+<p id="sellList"></p>
+<!-- nơi hiển thị danh sách bánh đã bán -->
+
+</div>
+
+
+<!-- =========================== -->
+<!-- TRANG CHI PHÍ -->
+<!-- =========================== -->
+
+<div id="cost" class="page">
+
+<h2>Nhập chi phí</h2>
+
+<input type="text" id="costName" placeholder="Tên chi phí">
+<!-- nhập tên chi phí ví dụ: mua thịt -->
+
+<input type="number" id="costMoney" placeholder="Số tiền">
+<!-- nhập số tiền -->
+
+<button onclick="addCost()">
+<!-- gọi hàm addCost khi bấm -->
+
+Thêm chi phí
+
+</button>
+
+<p id="costList"></p>
+<!-- hiển thị danh sách chi phí -->
+
+</div>
+
+
+<!-- =========================== -->
+<!-- TRANG LỢI NHUẬN -->
+<!-- =========================== -->
+
+<div id="profit" class="page">
+
+<h2>Lợi nhuận</h2>
+
+<p>
+
+Tổng lợi nhuận:
+
+<span id="profitMoney">0</span>
+<!-- JavaScript sẽ hiển thị lợi nhuận -->
+
+VNĐ
+
+</p>
+
+</div>
+
+
+<!-- =========================== -->
+<!-- TRANG LỊCH SỬ -->
+<!-- =========================== -->
+
+<div id="history" class="page">
+
+<h2>Lịch sử bán</h2>
+
+<p>Danh sách sẽ hiển thị ở đây</p>
+
+</div>
+
+
+<script src="js/script.js"></script>
+<!-- Kết nối file JavaScript để xử lý logic -->
+
+</body>
+
+</html>

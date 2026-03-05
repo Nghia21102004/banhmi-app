@@ -1,0 +1,128 @@
+/* style cho toàn trang */
+
+body{
+
+font-family: Arial;
+/* font chữ */
+
+background:#f4f4f4;
+/* màu nền */
+
+text-align:center;
+/* căn giữa nội dung */
+
+}
+/* giúp giao diện không bị vỡ trên điện thoại */
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+}
+
+/* container chính */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+/* ========================= */
+/* Responsive cho điện thoại */
+/* ========================= */
+
+@media (max-width: 768px){
+
+    body{
+        font-size:16px; /* chữ dễ đọc trên điện thoại */
+    }
+
+    .container{
+        padding:10px;
+    }
+
+    button{
+        width:100%; /* nút bấm full màn hình */
+        padding:12px;
+        font-size:16px;
+    }
+
+    input{
+        width:100%;
+        padding:10px;
+        font-size:16px;
+    }
+
+}
+/* tiêu đề */
+
+h1{
+
+color:#e67e22;
+/* màu cam */
+
+}
+
+
+/* menu */
+
+.menu{
+
+margin:20px;
+
+}
+
+
+/* nút menu */
+
+.menu button{
+
+padding:10px;
+/* khoảng cách bên trong */
+
+margin:5px;
+/* khoảng cách giữa các nút */
+
+font-size:16px;
+
+cursor:pointer;
+/* đổi icon chuột khi hover */
+
+}
+
+
+/* mỗi trang */
+
+.page{
+
+display:none;
+/* mặc định ẩn */
+
+background:white;
+
+margin:20px;
+
+padding:20px;
+
+border-radius:10px;
+/* bo góc */
+
+}
+
+
+/* hiển thị trang đầu */
+
+#home{
+
+display:block;
+
+}
+
+
+/* input và select */
+
+input,select{
+
+padding:8px;
+
+margin:5px;
+
+}
