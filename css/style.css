@@ -1,128 +1,229 @@
-/* style cho toàn trang */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 
-font-family: Arial;
-/* font chữ */
+font-family:'Poppins',sans-serif;
 
-background:#f4f4f4;
-/* màu nền */
+background:#f4f6fb;
+
+color:#333;
+
+}
+
+
+/* HEADER */
+
+header{
+
+background:linear-gradient(135deg,#ff8c00,#ff5e00);
+
+color:white;
+
+padding:20px;
 
 text-align:center;
-/* căn giữa nội dung */
 
-}
-/* giúp giao diện không bị vỡ trên điện thoại */
-body{
-    margin:0;
-    padding:0;
-    font-family: Arial, sans-serif;
-}
+font-size:20px;
 
-/* container chính */
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-}
-/* ========================= */
-/* Responsive cho điện thoại */
-/* ========================= */
-
-@media (max-width: 768px){
-
-    body{
-        font-size:16px; /* chữ dễ đọc trên điện thoại */
-    }
-
-    .container{
-        padding:10px;
-    }
-
-    button{
-        width:100%; /* nút bấm full màn hình */
-        padding:12px;
-        font-size:16px;
-    }
-
-    input{
-        width:100%;
-        padding:10px;
-        font-size:16px;
-    }
-
-}
-/* tiêu đề */
-
-h1{
-
-color:#e67e22;
-/* màu cam */
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 
 }
 
 
-/* menu */
+/* MENU */
 
 .menu{
 
-margin:20px;
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+padding:15px;
+
+background:white;
+
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 
 }
-
-
-/* nút menu */
 
 .menu button{
 
-padding:10px;
-/* khoảng cách bên trong */
+padding:10px 18px;
 
-margin:5px;
-/* khoảng cách giữa các nút */
+border:none;
 
-font-size:16px;
+border-radius:20px;
+
+background:#f1f1f1;
 
 cursor:pointer;
-/* đổi icon chuột khi hover */
+
+transition:0.3s;
+
+font-weight:500;
+
+}
+
+.menu button:hover{
+
+background:#ff8c00;
+
+color:white;
+
+transform:scale(1.05);
 
 }
 
 
-/* mỗi trang */
+/* CONTAINER */
+
+.container{
+
+max-width:700px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+
+/* PAGE */
 
 .page{
 
 display:none;
-/* mặc định ẩn */
 
-background:white;
-
-margin:20px;
-
-padding:20px;
-
-border-radius:10px;
-/* bo góc */
+animation:fade 0.4s ease;
 
 }
 
-
-/* hiển thị trang đầu */
-
-#home{
+.page.active{
 
 display:block;
 
 }
 
 
-/* input và select */
+/* CARD */
+
+.card{
+
+background:white;
+
+padding:20px;
+
+margin:15px 0;
+
+border-radius:12px;
+
+box-shadow:0 4px 15px rgba(0,0,0,0.05);
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-3px);
+
+}
+
+
+/* FORM */
+
+.formBox{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+margin-top:10px;
+
+}
 
 input,select{
 
-padding:8px;
+padding:12px;
 
-margin:5px;
+border-radius:8px;
+
+border:1px solid #ddd;
+
+font-size:15px;
+
+}
+
+button{
+
+padding:12px;
+
+border:none;
+
+border-radius:8px;
+
+background:#ff8c00;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+background:#ff5e00;
+
+transform:scale(1.03);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.menu{
+
+flex-direction:column;
+
+}
+
+}
+
+
+/* ANIMATION */
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(10px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
 
 }
