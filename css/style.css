@@ -4,11 +4,101 @@ margin:0;
 background:#f4f6fb;
 }
 
+/* HEADER */
+
 .topbar{
-background:#111827;
+
+background:linear-gradient(135deg,#ff7a18,#ffb347);
+
 color:white;
+
 padding:15px;
-text-align:center;
+
+border-bottom-left-radius:20px;
+border-bottom-right-radius:20px;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+.logoIcon{
+
+font-size:28px;
+
+}
+
+.logoText h1{
+
+font-size:20px;
+margin:0;
+
+}
+
+.logoText p{
+
+font-size:12px;
+opacity:0.8;
+margin:0;
+
+}
+
+/* MENU MOBILE */
+
+.bottomMenu{
+
+position:fixed;
+bottom:0;
+
+width:100%;
+
+background:white;
+
+display:flex;
+
+justify-content:space-around;
+
+padding:8px 0;
+
+box-shadow:0 -3px 10px rgba(0,0,0,0.1);
+
+}
+
+.bottomMenu button{
+
+background:none;
+border:none;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+font-size:18px;
+
+color:#555;
+
+}
+
+.bottomMenu button span{
+
+font-size:22px;
+
+}
+
+.bottomMenu button p{
+
+font-size:11px;
+margin:2px 0 0;
+
 }
 
 .page{
