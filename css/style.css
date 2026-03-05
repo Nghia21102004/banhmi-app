@@ -54,7 +54,27 @@ color:#ff8c00;
 transform:scale(1.1);
 
 }
+.card{
 
+background:white;
+
+border-radius:15px;
+
+padding:20px;
+
+margin:15px 0;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-4px);
+
+}
 body{
 
 padding-bottom:80px;
