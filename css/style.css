@@ -1,195 +1,140 @@
 body{
-font-family: Arial;
+
+font-family:Arial, sans-serif;
 margin:0;
-background:#f4f6fb;
+background:#f4f6f9;
+
 }
 
-/* HEADER */
 
 .topbar{
 
-background:linear-gradient(135deg,#ff7a18,#ffb347);
-
+background:#ff7a18;
 color:white;
-
+text-align:center;
 padding:15px;
-
-border-bottom-left-radius:20px;
-border-bottom-right-radius:20px;
-
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-
-}
-
-.logo{
-
-display:flex;
-align-items:center;
-gap:10px;
-
-}
-
-.logoIcon{
-
-font-size:28px;
-
-}
-
-.logoText h1{
-
 font-size:20px;
-margin:0;
 
 }
 
-.logoText p{
-
-font-size:12px;
-opacity:0.8;
-margin:0;
-
-}
-
-/* MENU MOBILE */
-
-.bottomMenu{
-
-position:fixed;
-bottom:0;
-
-width:100%;
-
-background:white;
-
-display:flex;
-
-justify-content:space-around;
-
-padding:8px 0;
-
-box-shadow:0 -3px 10px rgba(0,0,0,0.1);
-
-}
-
-.bottomMenu button{
-
-background:none;
-border:none;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-font-size:18px;
-
-color:#555;
-
-}
-
-.bottomMenu button span{
-
-font-size:22px;
-
-}
-
-.bottomMenu button p{
-
-font-size:11px;
-margin:2px 0 0;
-
-}
 
 .page{
+
 display:none;
 padding:20px;
+margin-bottom:80px;
+
 }
 
-.active{
+
+.page.active{
+
 display:block;
+
 }
+
 
 .cardBox{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-margin-top:20px;
+
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+
 }
+
 
 .card{
+
+flex:1;
 background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
+padding:15px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
 text-align:center;
+
 }
 
-.card h3{
-margin:0;
-font-size:16px;
-color:#555;
-}
 
 .card p{
-font-size:28px;
-margin:10px 0;
+
+font-size:22px;
 font-weight:bold;
+
 }
 
-.revenue{
-border-left:5px solid #22c55e;
+
+.filterBox{
+
+margin-top:20px;
+
 }
 
-.cost{
-border-left:5px solid #ef4444;
+
+.filterBox button{
+
+padding:8px 15px;
+border:none;
+border-radius:6px;
+background:#ff7a18;
+color:white;
+margin-right:10px;
+
 }
 
-.profit{
-border-left:5px solid #3b82f6;
-}
 
 .chartBox{
-margin-top:30px;
+
 background:white;
+margin-top:20px;
 padding:20px;
-border-radius:12px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
 }
 
-input{
-width:100%;
-padding:12px;
-margin-top:10px;
-border-radius:8px;
-border:1px solid #ddd;
-font-size:16px;
-}
-
-button{
-margin-top:10px;
-width:100%;
-padding:12px;
-border:none;
-border-radius:8px;
-background:#2563eb;
-color:white;
-font-size:16px;
-}
 
 .bottomMenu{
+
 position:fixed;
 bottom:0;
-left:0;
 width:100%;
 background:white;
 display:flex;
 justify-content:space-around;
-padding:10px;
-box-shadow:0 -3px 10px rgba(0,0,0,0.1);
+border-top:1px solid #ddd;
+
 }
 
+
 .bottomMenu button{
+
 background:none;
 border:none;
-font-size:22px;
+font-size:20px;
+padding:10px;
+
+}
+
+
+.bottomMenu p{
+
+margin:0;
+font-size:12px;
+
+}
+
+
+input{
+
+width:100%;
+padding:10px;
+margin-top:10px;
+
+}
+
+
+button{
+
+cursor:pointer;
+
 }
