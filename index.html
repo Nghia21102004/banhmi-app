@@ -24,145 +24,32 @@
 
 <!-- MENU -->
 
-<div class="menu">
-
-<button onclick="showPage('home')">Dashboard</button>
-
-<button onclick="showPage('sell')">Bán hàng</button>
-
-<button onclick="showPage('cost')">Chi phí</button>
-
-<button onclick="showPage('profit')">Lợi nhuận</button>
-
-<button onclick="showPage('history')">Lịch sử</button>
-
-</div>
-
-
-<div class="container">
-
-
-<!-- DASHBOARD -->
-
-<div id="home" class="page">
-
-<h2>Dashboard</h2>
-
-<div class="card">
-
-<p>Doanh thu hôm nay</p>
-
-<h3 id="todayRevenue">0 VNĐ</h3>
-
-</div>
-
-<div class="card">
-
-<p>Chi phí hôm nay</p>
-
-<h3 id="todayCost">0 VNĐ</h3>
-
-</div>
-
-<div class="card">
-
-<p>Lợi nhuận</p>
-
-<h3 id="todayProfit">0 VNĐ</h3>
-
-</div>
-
-</div>
-
-
-
-<!-- BÁN HÀNG -->
-
-<div id="sell" class="page">
-
-<h2>Nhập bán hàng</h2>
-
-<div class="formBox">
-
-<label>Loại bánh</label>
-
-<select id="banh">
-
-<option value="15000">Bánh mì thịt</option>
-
-<option value="12000">Bánh mì trứng</option>
-
-<option value="10000">Bánh mì chả</option>
-
-</select>
-
-<label>Số lượng</label>
-
-<input type="number" id="soluong">
-
-<button onclick="addSell()">Thêm</button>
-
-</div>
-
-<p id="sellList"></p>
-
-</div>
-
-
-
-<!-- CHI PHÍ -->
-
-<div id="cost" class="page">
-
-<h2>Nhập chi phí</h2>
-
-<div class="formBox">
-
-<input type="text" id="costName" placeholder="Tên chi phí">
-
-<input type="number" id="costMoney" placeholder="Số tiền">
-
-<button onclick="addCost()">Thêm chi phí</button>
-
-</div>
-
-<p id="costList"></p>
-
-</div>
-
-
-
-<!-- LỢI NHUẬN -->
-
-<div id="profit" class="page">
-
-<h2>Lợi nhuận</h2>
-
-<div class="card">
-
-<p>Tổng lợi nhuận</p>
-
-<h3 id="profitMoney">0 VNĐ</h3>
-
-</div>
-
-</div>
-
-
-
-<!-- LỊCH SỬ -->
-
-<div id="history" class="page">
-
-<h2>Lịch sử bán</h2>
-
-<div class="card">
-
-<p>Danh sách sẽ hiển thị ở đây</p>
-
-</div>
-
-</div>
+<div class="bottom-menu">
+
+<button onclick="showPage('home')">
+<span>🏠</span>
+<p>Home</p>
+</button>
+
+<button onclick="showPage('sell')">
+<span>🛒</span>
+<p>Bán</p>
+</button>
+
+<button onclick="showPage('cost')">
+<span>💸</span>
+<p>Chi phí</p>
+</button>
+
+<button onclick="showPage('profit')">
+<span>📈</span>
+<p>Lãi</p>
+</button>
+
+<button onclick="showPage('history')">
+<span>📜</span>
+<p>Lịch sử</p>
+</button>
 
 </div>
 
