@@ -1,21 +1,108 @@
-.card{
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bánh Mì Băng Tâm</title>
 
-background:white;
+<link rel="stylesheet" href="css/style.css">
 
-border-radius:15px;
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 
-padding:20px;
+<body>
 
-margin:15px 0;
+<header class="topbar">
+<h1>🥖 Bánh Mì Băng Tâm</h1>
+</header>
 
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+<!-- DASHBOARD -->
 
-transition:0.3s;
+<div id="home" class="page active">
 
-}
+<h2>Dashboard</h2>
 
-.card:hover{
+<div class="cardBox">
 
-transform:translateY(-4px);
+<div class="card revenue">
+<h3>Doanh thu</h3>
+<p id="todayRevenue">0</p>
+<span>VNĐ</span>
+</div>
 
-}
+<div class="card cost">
+<h3>Chi phí</h3>
+<p id="todayCost">0</p>
+<span>VNĐ</span>
+</div>
+
+<div class="card profit">
+<h3>Lợi nhuận</h3>
+<p id="todayProfit">0</p>
+<span>VNĐ</span>
+</div>
+
+</div>
+
+<div class="chartBox">
+<canvas id="myChart"></canvas>
+</div>
+
+</div>
+
+<!-- BÁN HÀNG -->
+
+<div id="sell" class="page">
+
+<h2>Nhập bán hàng</h2>
+
+<input id="sellInput" type="number" placeholder="Nhập doanh thu">
+
+<button onclick="addRevenue()">
+Lưu doanh thu
+</button>
+
+</div>
+
+<!-- CHI PHÍ -->
+
+<div id="cost" class="page">
+
+<h2>Nhập chi phí</h2>
+
+<input id="costInput" type="number" placeholder="Nhập chi phí">
+
+<button onclick="addCost()">
+Lưu chi phí
+</button>
+
+</div>
+
+<!-- LỊCH SỬ -->
+
+<div id="history" class="page">
+
+<h2>Lịch sử</h2>
+
+<ul id="historyList"></ul>
+
+</div>
+
+<!-- MENU MOBILE -->
+
+<div class="bottomMenu">
+
+<button onclick="showPage('home')">🏠</button>
+
+<button onclick="showPage('sell')">💰</button>
+
+<button onclick="showPage('cost')">💸</button>
+
+<button onclick="showPage('history')">📜</button>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
