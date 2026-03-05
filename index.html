@@ -1,56 +1,104 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Bánh Mì Băng Tâm</title>
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<header>
-
+<header class="topbar">
 <h1>🥖 Bánh Mì Băng Tâm</h1>
-
 </header>
 
+<!-- DASHBOARD -->
 
-<!-- MENU -->
+<div id="home" class="page active">
 
-<div class="bottom-menu">
+<h2>Dashboard</h2>
 
-<button onclick="showPage('home')">
-<i class="fa-solid fa-chart-line"></i>
-<span>Tổng quan</span>
+<div class="cardBox">
+
+<div class="card revenue">
+<h3>Doanh thu</h3>
+<p id="todayRevenue">0</p>
+<span>VNĐ</span>
+</div>
+
+<div class="card cost">
+<h3>Chi phí</h3>
+<p id="todayCost">0</p>
+<span>VNĐ</span>
+</div>
+
+<div class="card profit">
+<h3>Lợi nhuận</h3>
+<p id="todayProfit">0</p>
+<span>VNĐ</span>
+</div>
+
+</div>
+
+<div class="chartBox">
+<canvas id="myChart"></canvas>
+</div>
+
+</div>
+
+<!-- BÁN HÀNG -->
+
+<div id="sell" class="page">
+
+<h2>Nhập bán hàng</h2>
+
+<input id="sellInput" type="number" placeholder="Nhập doanh thu">
+
+<button onclick="addRevenue()">
+Lưu doanh thu
 </button>
 
-<button onclick="showPage('sell')">
-<i class="fa-solid fa-receipt"></i>
-<span>Doanh thu</span>
+</div>
+
+<!-- CHI PHÍ -->
+
+<div id="cost" class="page">
+
+<h2>Nhập chi phí</h2>
+
+<input id="costInput" type="number" placeholder="Nhập chi phí">
+
+<button onclick="addCost()">
+Lưu chi phí
 </button>
 
-<button onclick="showPage('cost')">
-<i class="fa-solid fa-money-bill"></i>
-<span>Chi phí</span>
-</button>
+</div>
 
-<button onclick="showPage('profit')">
-<i class="fa-solid fa-coins"></i>
-<span>Lợi nhuận</span>
-</button>
+<!-- LỊCH SỬ -->
 
-<button onclick="showPage('history')">
-<i class="fa-solid fa-clock-rotate-left"></i>
-<span>Lịch sử</span>
-</button>
+<div id="history" class="page">
+
+<h2>Lịch sử</h2>
+
+<ul id="historyList"></ul>
+
+</div>
+
+<!-- MENU MOBILE -->
+
+<div class="bottomMenu">
+
+<button onclick="showPage('home')">🏠</button>
+
+<button onclick="showPage('sell')">💰</button>
+
+<button onclick="showPage('cost')">💸</button>
+
+<button onclick="showPage('history')">📜</button>
 
 </div>
 
