@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,53 +7,48 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<h1>🥖 Bánh mì</h1>
-
-<div class="menu">
-
-<button onclick="showPage('home')">Trang chủ</button>
-
-<button onclick="showPage('sell')">Nhập bán hàng</button>
-
-<button onclick="showPage('cost')">Chi phí</button>
-
-<button onclick="showPage('profit')">Lợi nhuận</button>
-
-<button onclick="showPage('history')">Lịch sử</button>
-
-</div>
-
+<header class="topbar">
+<h1>🥖 Bánh Mì Băng Tâm</h1>
+</header>
 
 <!-- DASHBOARD -->
 
-<div id="home" class="page">
+<div id="home" class="page active">
 
 <h2>Dashboard</h2>
 
-<p>
-Doanh thu hôm nay:
-<span id="todayRevenue">0</span>
-VNĐ
-</p>
+<div class="cardBox">
 
-<p>
-Chi phí hôm nay:
-<span id="todayCost">0</span>
-VNĐ
-</p>
+<div class="card revenue">
+<h3>Doanh thu</h3>
+<p id="todayRevenue">0</p>
+<span>VNĐ</span>
+</div>
 
-<p>
-Lợi nhuận:
-<span id="todayProfit">0</span>
-VNĐ
-</p>
+<div class="card cost">
+<h3>Chi phí</h3>
+<p id="todayCost">0</p>
+<span>VNĐ</span>
+</div>
+
+<div class="card profit">
+<h3>Lợi nhuận</h3>
+<p id="todayProfit">0</p>
+<span>VNĐ</span>
+</div>
 
 </div>
 
+<div class="chartBox">
+<canvas id="myChart"></canvas>
+</div>
+
+</div>
 
 <!-- BÁN HÀNG -->
 
@@ -62,28 +56,13 @@ VNĐ
 
 <h2>Nhập bán hàng</h2>
 
-<label>Loại bánh</label>
+<input id="sellInput" type="number" placeholder="Nhập doanh thu">
 
-<select id="banh">
-
-<option value="15000">Bánh mì thịt</option>
-
-<option value="12000">Bánh mì trứng</option>
-
-<option value="10000">Bánh mì chả</option>
-
-</select>
-
-<label>Số lượng</label>
-
-<input type="number" id="soluong">
-
-<button onclick="addSell()">Thêm</button>
-
-<p id="sellList"></p>
+<button onclick="addRevenue()">
+Lưu doanh thu
+</button>
 
 </div>
-
 
 <!-- CHI PHÍ -->
 
@@ -91,42 +70,37 @@ VNĐ
 
 <h2>Nhập chi phí</h2>
 
-<input type="text" id="costName" placeholder="Tên chi phí">
+<input id="costInput" type="number" placeholder="Nhập chi phí">
 
-<input type="number" id="costMoney" placeholder="Số tiền">
-
-<button onclick="addCost()">Thêm chi phí</button>
-
-<p id="costList"></p>
+<button onclick="addCost()">
+Lưu chi phí
+</button>
 
 </div>
-
-
-<!-- LỢI NHUẬN -->
-
-<div id="profit" class="page">
-
-<h2>Lợi nhuận</h2>
-
-<p>
-Tổng lợi nhuận:
-<span id="profitMoney">0</span>
-VNĐ
-</p>
-
-</div>
-
 
 <!-- LỊCH SỬ -->
 
 <div id="history" class="page">
 
-<h2>Lịch sử bán</h2>
+<h2>Lịch sử</h2>
 
-<p>Danh sách sẽ hiển thị ở đây</p>
+<ul id="historyList"></ul>
 
 </div>
 
+<!-- MENU MOBILE -->
+
+<div class="bottomMenu">
+
+<button onclick="showPage('home')">🏠</button>
+
+<button onclick="showPage('sell')">💰</button>
+
+<button onclick="showPage('cost')">💸</button>
+
+<button onclick="showPage('history')">📜</button>
+
+</div>
 
 <script src="js/script.js"></script>
 
