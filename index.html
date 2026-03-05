@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Bánh Mì Băng Tâm</title>
 
 <link rel="stylesheet" href="css/style.css">
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
 <header class="topbar">
+
 <h1>🥖 Bánh Mì Băng Tâm</h1>
+
 </header>
+
 
 <!-- DASHBOARD -->
 
@@ -22,47 +28,90 @@
 
 <h2>Dashboard</h2>
 
+
 <div class="cardBox">
 
 <div class="card revenue">
+
 <h3>Doanh thu</h3>
+
 <p id="todayRevenue">0</p>
+
 <span>VNĐ</span>
+
 </div>
+
 
 <div class="card cost">
+
 <h3>Chi phí</h3>
+
 <p id="todayCost">0</p>
+
 <span>VNĐ</span>
+
 </div>
+
 
 <div class="card profit">
+
 <h3>Lợi nhuận</h3>
+
 <p id="todayProfit">0</p>
+
 <span>VNĐ</span>
+
 </div>
 
 </div>
+
+
+<!-- FILTER -->
+
+<div class="filterBox">
+
+<button onclick="setFilter('day')">Ngày</button>
+
+<button onclick="setFilter('week')">Tuần</button>
+
+<button onclick="setFilter('month')">Tháng</button>
+
+</div>
+
 
 <div class="chartBox">
-<canvas id="myChart"></canvas>
+
+<h3>📈 Doanh thu theo thời gian</h3>
+<canvas id="revenueChart"></canvas>
+
+<h3>📊 So sánh hôm nay</h3>
+<canvas id="compareChart"></canvas>
+
+<h3>🥧 Tỷ lệ tài chính</h3>
+<canvas id="financeChart"></canvas>
+
 </div>
 
 </div>
+
 
 <!-- BÁN HÀNG -->
 
 <div id="sell" class="page">
 
-<h2>Nhập bán hàng</h2>
+<h2>Nhập doanh thu</h2>
 
 <input id="sellInput" type="number" placeholder="Nhập doanh thu">
 
 <button onclick="addRevenue()">
+
 Lưu doanh thu
+
 </button>
 
 </div>
+
+
 
 <!-- CHI PHÍ -->
 
@@ -73,10 +122,14 @@ Lưu doanh thu
 <input id="costInput" type="number" placeholder="Nhập chi phí">
 
 <button onclick="addCost()">
+
 Lưu chi phí
+
 </button>
 
 </div>
+
+
 
 <!-- LỊCH SỬ -->
 
@@ -88,31 +141,45 @@ Lưu chi phí
 
 </div>
 
+
+
 <!-- MENU MOBILE -->
 
 <div class="bottomMenu">
 
 <button onclick="showPage('home')">
-<span>🏠</span>
-<p>Trang chủ</p>
+
+🏠
+<p>Home</p>
+
 </button>
+
 
 <button onclick="showPage('sell')">
-<span>💰</span>
-<p>Bán</p>
+
+💰
+<p>Doanh thu</p>
+
 </button>
+
 
 <button onclick="showPage('cost')">
-<span>💸</span>
+
+💸
 <p>Chi phí</p>
+
 </button>
 
+
 <button onclick="showPage('history')">
-<span>📜</span>
+
+📜
 <p>Lịch sử</p>
+
 </button>
 
 </div>
+
 
 <script src="js/script.js"></script>
 
